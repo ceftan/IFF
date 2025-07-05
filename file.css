@@ -79,3 +79,29 @@ width:100%;
   display: flex;
  filter: brightness(40%);
 }
+
+.opissite {
+	background-color: transparent;
+    width: auto;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    left: 5%;
+    top: 200px; 
+    color: #ffffff;
+    font-size: 40px;
+
+	}
+
+.abiturient {
+	background-color: transparent;
+    width: auto;
+    height: auto;
+    margin: 0;
+    position: absolute;
+    left: 5%;
+    top: 400px; 
+    color: #ffffff;
+    font-size: 30px;
+
+	}
