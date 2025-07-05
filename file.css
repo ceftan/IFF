@@ -71,3 +71,11 @@ width:40px;
   left: 1%;     
   display: flex;
 }
+
+.fon {
+width:100%;
+  position: absolute;
+  top: 50px;            
+  display: flex;
+ filter: brightness(40%);
+}
