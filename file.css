@@ -73,9 +73,9 @@ width:40px;
 }
 
 .fon {
-width:100%;
+width:1%;
   position: absolute;
-  top: 51px;            
+  top: 50px;            
   display: flex;
  filter: brightness(40%);
 }
