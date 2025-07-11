@@ -1,0 +1,307 @@
+body {
+    color: #262626;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.6;
+    background-color: #ffffff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HEADER SECTION */
+.top-line {
+    background-color: #002137;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    /* Убедимся, что пространство между logo-area и sitevgtu распределяется */
+    flex-wrap: wrap; /* Позволяет элементам переноситься на новую строку на маленьких экранах */
+    gap: 10px; /* Отступ между элементами */
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    /* Добавляем flex-wrap, чтобы ссылка "На Главную" не выталкивала логотип */
+    flex-wrap: wrap; 
+}
+
+.logo-icon {
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+/* Стили для новой ссылки "На Главную" в шапке */
+.header-main-link {
+    color: #ffd700; /* Яркий цвет для заметности */
+    font-size: 16px;
+    font-weight: bold;
+    margin-left: 15px; /* Отступ от названия сайта */
+    white-space: nowrap;
+}
+
+.header-main-link:hover {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.sitevgtu {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+    white-space: nowrap;
+}
+
+/* MAIN CONTENT SECTION (WHITE BACKGROUND) */
+.mid-section-white {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.white-text-area {
+    background-color: #ffffff;
+    padding: 30px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    max-width: 900px;
+    width: 100%;
+}
+
+.white-text-area h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.white-text-area p {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+/* QUESTIONS SECTION */
+.last-line {
+    padding: 40px 5%;
+    background-color: #f8f8f8;
+}
+
+.zagolovok {
+    color: #000000;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vopros {
+    color: #000000;
+    font-size: 24px;
+}
+
+.vopros a {
+    color: #000000;
+}
+
+/* FOOTER SECTION */
+.end-line {
+    background-color: #002137;
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.end-line a {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.end-line a:hover {
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 16px;
+    }
+
+    .sitevgtu {
+        font-size: 16px;
+    }
+
+    .header-main-link {
+        font-size: 14px;
+        margin-left: 10px;
+    }
+
+    .zagolovok {
+        font-size: 32px;
+    }
+
+    .vopros {
+        font-size: 22px;
+    }
+
+    .white-text-area {
+        padding: 20px;
+    }
+
+    .white-text-area h2 {
+        font-size: 24px;
+        margin-bottom: 15px;
+    }
+
+    .white-text-area p {
+        font-size: 15px;
+        line-height: 1.7;
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .top-line {
+        height: auto; /* Автоматическая высота для нескольких строк */
+        flex-direction: column;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        align-items: center; /* Центрируем элементы по горизонтали */
+    }
+
+    .logo-area {
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .sitevgtu {
+        font-size: 14px;
+        margin-top: 5px; /* Небольшой отступ, если элементы перенеслись */
+    }
+
+    .header-main-link {
+        font-size: 14px;
+        margin-left: 0; /* Убираем отступ на маленьких экранах */
+        margin-top: 5px; /* Отступ от названия сайта */
+    }
+
+    .zagolovok {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .vopros {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .last-line {
+        padding: 20px 5%;
+    }
+
+    .mid-section-white {
+        padding: 20px 10px;
+    }
+
+    .white-text-area {
+        padding: 15px;
+    }
+
+    .white-text-area h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    .white-text-area p {
+        font-size: 14px;
+        line-height: 1.6;
+        margin-bottom: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .zagolovok {
+        font-size: 24px;
+    }
+
+    .vopros {
+        font-size: 16px;
+    }
+}
