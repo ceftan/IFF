@@ -1,217 +1,313 @@
 body {
-	color:#262626;
-	font-family:Arial;
-	font-size:12px;
-	margin:0 auto;
-	}
+    color: #262626;
+    font-family: Arial, sans-serif;
+    font-size: 16px; /* Увеличил базовый размер шрифта для лучшей читаемости */
+    margin: 0;
+    line-height: 1.6; /* Добавил высоту строки для лучшей читаемости */
+}
 
 .container {
-	width:1000px;
-	height:2000px;
-	}
+    width: 100%;
+    max-width: 1200px; /* Ограничиваем максимальную ширину */
+    margin: 0 auto; /* Центрируем контейнер */
+    min-height: 100vh; /* Минимальная высота, чтобы футер был внизу */
+    display: flex;
+    flex-direction: column;
+}
 
-.top-line {
-	background-color:#002137;
-	width:100%;
-	height:50px;
-position: relative;
-	}
-
-
+/* Общие стили для ссылок */
 a {
-  color: white; 
-  text-decoration: none; 
-transition: all 1.2s ease;
+    color: inherit; /* Цвет ссылки будет наследоваться от родителя */
+    text-decoration: none;
+    transition: all 0.3s ease; /* Уменьшил время перехода для более плавной анимации */
 }
 
 a:hover {
-      text-decoration: underline;
+    text-decoration: underline;
+}
 
-    }
+/* HEADER SECTION */
+.top-line {
+    background-color: #002137;
+    width: 100%;
+    height: 60px; /* Увеличил высоту для лучшего вида */
+    display: flex;
+    align-items: center; /* Выравнивание элементов по центру по вертикали */
+    padding: 0 20px; /* Внутренние отступы по бокам */
+    box-sizing: border-box; /* Включаем padding в общую ширину */
+}
 
-.sitevgtu {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 80%;
-    top: 16px; 
-    color: #ffffff;
-    font-size: 18px;
-font-weight:100;
-	}
+.header-content {
+    display: flex;
+    justify-content: space-between; /* Распределение элементов по краям */
+    align-items: center;
+    width: 100%;
+    max-width: 1160px; /* Ограничение ширины контента хедера */
+    margin: 0 auto; /* Центрирование контента хедера */
+}
 
-.logo {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 7%;
-    top: 16px; 
-    color: #ffffff;
-    font-size: 15px;
-font-weight:bold;
-	}
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Расстояние между иконкой и текстом */
+}
 
 .logo-icon {
-width:40px;
-	height:40px;
-  position: absolute;
-  top: 5px;       
-  left: 1%;     
-  display: flex;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0; /* Запрещает сжиматься */
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 18px; /* Увеличил размер шрифта */
+    font-weight: bold;
+    white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+.sitevgtu {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 100;
+    white-space: nowrap; /* Предотвращает перенос текста */
+}
+
+/* MAIN CONTENT SECTION */
+.mid-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden; /* Обрезает содержимое, выходящее за границы */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Позволяет этой секции занимать доступное пространство */
 }
 
 .fon {
-width:100%;
-  position: absolute;
-  top: 50px;            
-  display: flex;
- filter: brightness(40%);
+    width: 100%;
+    height: auto; /* Автоматическая высота для сохранения пропорций */
+    display: block; /* Убирает лишние отступы под изображением */
+    filter: brightness(40%);
+    object-fit: cover; /* Изображение будет покрывать контейнер */
+    min-height: 300px; /* Минимальная высота для фонового изображения */
+}
+
+.overlay-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Выравнивание по центру по вертикали */
+    align-items: flex-start; /* Выравнивание по левому краю */
+    padding: 20px 5%; /* Отступы по бокам */
+    box-sizing: border-box;
+    text-align: left;
 }
 
 .opissite {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 200px; 
     color: #ffffff;
-    font-size: 40px;
-
-	}
+    font-size: 30px; /* Адаптивный размер шрифта */
+    margin-bottom: 20px;
+    max-width: 800px; /* Ограничиваем ширину текста */
+}
 
 .abiturient {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 400px; 
     color: #ffffff;
-    font-size: 30px;
+    font-size: 24px; /* Адаптивный размер шрифта */
+    max-width: 800px; /* Ограничиваем ширину текста */
+}
 
-	}
+.abiturient a {
+    color: #ffffff; /* Цвет ссылки внутри абзаца */
+}
+
+/* QUESTIONS SECTION */
+.last-line {
+    padding: 40px 5%; /* Отступы для секции вопросов */
+    background-color: #f8f8f8; /* Легкий фон для этой секции */
+}
+
 .zagolovok {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 700px; 
     color: #000000;
-    font-size: 40px;
-
-	}
-
-.vopros1 {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 750px; 
-    color: #000000;
-    font-size: 30px;
-
-	}
-
-.vopros1 a {
-  color: black; 
-  text-decoration: none; 
-transition: all 1.2s ease;
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-.vopros1 a:hover {
-      text-decoration: underline;
-
-    }
-
-.vopros2 {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 800px; 
-    color: #000000;
-    font-size: 30px;
-
-	}
-
-.vopros2 a {
-  color: black; 
-  text-decoration: none; 
-transition: all 1.2s ease;
+.question-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Расстояние между вопросами */
 }
 
-.vopros2 a:hover {
-      text-decoration: underline;
-
-    }
-
-.vopros3 {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 850px; 
+.vopros {
     color: #000000;
-    font-size: 30px;
-
-	}
-
-.vopros3 a {
-  color: black; 
-  text-decoration: none; 
-transition: all 1.2s ease;
+    font-size: 24px;
 }
 
-.vopros3 a:hover {
-      text-decoration: underline;
-
-    }
-
-.voprosdr {
-	background-color: transparent;
-    width: auto;
-    height: auto;
-    margin: 0;
-    position: absolute;
-    left: 5%;
-    top: 900px; 
-    color: #000000;
-    font-size: 30px;
-
-	}
-
-.voprosdr a {
-  color: black; 
-  text-decoration: none; 
-transition: all 1.2s ease;
+.vopros a {
+    color: #000000; /* Цвет ссылок в вопросах */
 }
 
-.voprosdr a:hover {
-      text-decoration: underline;
-
-    }
-
-
+/* FOOTER SECTION */
 .end-line {
-	background-color:#002137;
-	width:100%;
-top:1950px;
+    background-color: #002137;
+    width: 100%;
+    height: 50px;
+    margin-top: auto;
+    display: flex; /* Добавляем Flexbox для центрирования */
+    justify-content: center; /* Центрируем по горизонтали */
+    align-items: center; /* Центрируем по вертикали */
+    color: #ffffff; /* Цвет текста в футере */
+    font-size: 14px; /* Размер шрифта */
+    padding: 0 15px; /* Внутренние отступы */
+    box-sizing: border-box; /* Учитываем padding в ширине */
+    text-align: center; /* Выравнивание текста */
+}
 
-	height:50px;
-position: absolute;
-	}
+.end-line a {
+    color: #ffffff;
+    text-decoration: underline; /* Подчёркивание для ссылок в футере */
+}
+
+.end-line a:hover {
+    text-decoration: none;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVE DESIGN */
+
+/* Для больших экранов (десктопы) */
+@media (min-width: 1025px) {
+    .opissite {
+        font-size: 40px;
+    }
+
+    .abiturient {
+        font-size: 30px;
+    }
+
+    .zagolovok {
+        font-size: 40px;
+    }
+
+    .vopros {
+        font-size: 30px;
+    }
+}
+
+
+/* Для планшетов (от 768px до 1024px) */
+@media (max-width: 1024px) {
+    .logo {
+        font-size: 16px;
+    }
+
+    .sitevgtu {
+        font-size: 16px;
+    }
+
+    .opissite {
+        font-size: 28px;
+    }
+
+    .abiturient {
+        font-size: 22px;
+    }
+
+    .zagolovok {
+        font-size: 32px;
+    }
+
+    .vopros {
+        font-size: 22px;
+    }
+}
+
+/* Для мобильных устройств (до 767px) */
+@media (max-width: 767px) {
+    body {
+        font-size: 14px;
+    }
+
+    .top-line {
+        height: 80px; /* Увеличиваем высоту для лучшей читаемости на мобильных */
+        flex-direction: column; /* Элементы хедера будут расположены вертикально */
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+    }
+
+    .logo-area {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .logo {
+        font-size: 16px;
+    }
+
+    .sitevgtu {
+        font-size: 14px;
+    }
+
+    .opissite {
+        font-size: 20px;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .abiturient {
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .overlay-content {
+        justify-content: flex-start; /* Выравнивание сверху */
+        padding-top: 50px; /* Отступ сверху */
+    }
+
+    .zagolovok {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .vopros {
+        font-size: 18px;
+        text-align: center;
+    }
+
+    .last-line {
+        padding: 20px 5%;
+    }
+}
+
+/* Для очень маленьких мобильных устройств (до 480px) */
+@media (max-width: 480px) {
+    .opissite {
+        font-size: 18px;
+    }
+
+    .abiturient {
+        font-size: 14px;
+    }
+
+    .zagolovok {
+        font-size: 24px;
+    }
+
+    .vopros {
+        font-size: 16px;
+    }
+
+    .logo-icon {
+        width: 30px;
+        height: 30px;
+    }
+}
